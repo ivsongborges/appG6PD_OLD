@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/quiz.page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -22,13 +23,33 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: ListView(
-          children: <Widget> [
+          children: <Widget>[
+            Container(
+              height: 25,
+              alignment: Alignment.center,
+              child: FlatButton(
+                child: Text(
+                  "Recuperar Senha",
+                  textAlign: TextAlign.right,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuizPage(),
+                    ),
+                  );
+                },
+              ),
+            ),
             ListTile(
               leading: Icon(
                   Icons.question_answer
               ),
-            title: Text('Quiz'),
+              title: Text('Quiz'),
             ),
+
+
 
             ListTile(
               leading: Icon(Icons.details),
@@ -73,5 +94,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
 

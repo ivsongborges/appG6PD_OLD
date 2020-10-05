@@ -1,5 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/components/centered_circular_progress.dart';
+import 'package:flutter_app/components/centered_message.dart';
+import 'package:flutter_app/components/finish_dialog.dart';
+import 'package:flutter_app/components/result_dialog.dart';
+import 'package:flutter_app/controllers/quiz_controller.dart';
 
 class QuizPage extends StatefulWidget {
   @override
@@ -30,12 +35,12 @@ class _QuizPageState extends State<QuizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey.shade900,
-        title: Text('QUIZ COVID-19 ( ${_scoreKeeper.length}/${_controller.questionsNumber} )'),
+        backgroundColor: Colors.blue,
+        title: Text('QUIZ G6PD ( ${_scoreKeeper.length}/${_controller.questionsNumber} )'),
         centerTitle: true,
         elevation: 0.0,
       ),
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -77,7 +82,7 @@ class _QuizPageState extends State<QuizPage> {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 25.0,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
         ),
