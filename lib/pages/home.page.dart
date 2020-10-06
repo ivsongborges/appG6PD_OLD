@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/g6pd.page.dart';
 import 'package:flutter_app/pages/quiz.page.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -9,52 +11,38 @@ class HomePage extends StatelessWidget {
         title: Center(
           child: const Text('G6PD'),
         ),
-        actions: <Widget>[
-          Container(
-            width: 60,
-            child: FlatButton(
-              child: Icon(
-                Icons.search,
-                color: Color(0xFFBABABA),
-              ),
-              onPressed: () => {},
-            ),
-          ),
-        ],
       ),
-      body: ListView(
+          body: ListView(
           children: <Widget>[
-            Container(
-              height: 25,
-              alignment: Alignment.center,
-              child: FlatButton(
-                child: Text(
-                  "Recuperar Senha",
-                  textAlign: TextAlign.right,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => QuizPage(),
-                    ),
-                  );
-                },
-              ),
-            ),
+
             ListTile(
-              leading: Icon(
-                  Icons.question_answer
-              ),
+              leading: Icon(Icons.question_answer),
               title: Text('Quiz'),
+              subtitle: Text('Teste seus conhecimentos!'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => QuizPage(),
+                  ),
+                );
+              },
             ),
 
 
 
             ListTile(
               leading: Icon(Icons.details),
-              title: Text('Oq ue é G6PD?'),
-              subtitle: Text('è uma doença...'),
+              title: Text('O que é Deficiência de G6PD?'),
+              //subtitle: Text('è uma doença...'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => G6pdPage(),
+                  )
+                );
+              }
             )
           ]
       ),
@@ -72,14 +60,15 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
+
                 ),
               ),
             ),
             ListTile(
               leading: Icon(Icons.question_answer),
               title: Text('Quiz'),
-              //onPressed: () => {},
             ),
+
             ListTile(
               leading: Icon(Icons.account_circle),
               title: Text('Profile'),
