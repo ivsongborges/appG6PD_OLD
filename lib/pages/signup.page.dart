@@ -5,13 +5,13 @@ class SignupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top: 10, left: 40, right: 40),
+        padding: EdgeInsets.only(top: 50, left: 40, right: 40),
         color: Colors.white,
         child: ListView(
           children: <Widget>[
             Container(
-              width: 200,
-              height: 200,
+              width: 140,
+              height: 140,
               alignment: Alignment(0.0, 1.15),
               decoration: new BoxDecoration(
                 image: new DecorationImage(

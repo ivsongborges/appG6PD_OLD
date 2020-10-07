@@ -79,6 +79,5 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/logo.jpg
-    - assets/reset-password-icon.png
+    - assets/
 

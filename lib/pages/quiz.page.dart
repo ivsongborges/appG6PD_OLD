@@ -13,6 +13,7 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   final _controller = QuizController();
+
   List<Widget> _scoreKeeper = [];
 
   bool _loading = true;

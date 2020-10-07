@@ -10,8 +10,10 @@ class QuizController {
   bool _shiftAnswer;
   int hitNumber = 0;
 
-  int get questionsNumber => _questionBank.length ?? 0;
+  int get questionsNumber => _questionBank?.length ?? 0;
   Question get question => _questionBank[questionIndex];
+
+
 
   Future<void> initialize() async {
     questionIndex = 0;
